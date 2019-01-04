@@ -59,8 +59,8 @@ int main(int argc, char *argv[])
 	char **tokens = (char**)malloc(bytes*sizeof(char*));
 	if(tokens == NULL)
 	{
-        fprintf(stderr, "Not enough memory\n");
-        return 0;
+		fprintf(stderr, "Not enough memory\n");
+		return 0;
 	}
 
 	//Tokenize function returns the size of the array of string

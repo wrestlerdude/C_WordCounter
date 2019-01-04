@@ -21,7 +21,7 @@ int readfile(char **buffer, char *input)
 		if (file == NULL)
 		{
 			fprintf(stderr, "could not open %s for reading: %s\n", input,
-                strerror(errno));
+				strerror(errno));
 			exit(0);
 		}
 		//Counts the number of bytes in a file and rewinds to the start.
@@ -31,15 +31,15 @@ int readfile(char **buffer, char *input)
 		*buffer = (char*)malloc(bytes+1);
 		if(*buffer == NULL)
 		{
-        	fprintf(stderr, "Not enough memory\n");
+			fprintf(stderr, "Not enough memory\n");
 			exit(0);
 		}
 		//Reads in entire textfile into buffer
 		if(fread(*buffer, bytes, 1, file) != 1)
 		{
 			fprintf(stderr, "could not read\n");
-       		free(*buffer);
-       		*buffer = NULL;
+			free(*buffer);
+			*buffer = NULL;
 			exit(0);
 		}
 		//Sets the null byte at the end of the buffer to make it a null terminated string
