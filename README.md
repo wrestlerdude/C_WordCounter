@@ -1,4 +1,4 @@
-Created by Raish Allan 40316824
+Created by Raish Allan
 
 About wordcount:
 This program counts the number of words from a textfile
